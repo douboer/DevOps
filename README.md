@@ -23,3 +23,6 @@
 * Splunk
 * k8s
 * ansible
+
+## note
+ * [note](devopsnote.md)
