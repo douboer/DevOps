@@ -1,6 +1,9 @@
 
 # DevOps
-devops学习 & 输出
+
+
+## 架构
+* [如何为企业快速设计高可用的阿里云架构](https://blog.51cto.com/ganbing/2103694)
 
 ## 数据库
 
