@@ -1,3 +1,5 @@
+mermaid: true
+
 ## devops笔记
 
 #### LB & HA
