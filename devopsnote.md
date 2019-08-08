@@ -7,6 +7,9 @@
                  |                 |
 APP - CDN - WAF -|- SLB - ECS集群 -|- RDS集群
                  |                 |
-CDN 优点
+CDN:
+<li>内容分发、复制、cache
+<li>智能DNS，优化到达缓存/复制点
+<li>缺点：能容可能不同步，可闲时同步
 
 
