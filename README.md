@@ -1,6 +1,8 @@
 
 # DevOps
 
+## note
+ * [DevOps笔记](devopsnote.md)
 
 ## 架构
 * [如何为企业快速设计高可用的阿里云架构](https://blog.51cto.com/ganbing/2103694)
@@ -23,6 +25,3 @@
 * Splunk
 * k8s
 * ansible
-
-## note
- * [note](devopsnote.md)
