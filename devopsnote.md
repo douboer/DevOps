@@ -50,10 +50,10 @@ WAF价格高出SLB好多
 Nginx vs. LVS vs. haproxy vs. DNS
 
 
-<script src="webfont.js"></script>
-<script src="snap.svg-min.js"></script>
-<script src="underscore-min.js"></script>
-<script src="sequence-diagram-min.js"></script>
+<script src="https://bramp.github.io/js-sequence-diagrams/js/webfont.js"></script>
+<script src="https://bramp.github.io/js-sequence-diagrams/js/snap.svg-min.js"></script>
+<script src="https://bramp.github.io/js-sequence-diagrams/js/underscore-min.js"></script>
+<script src="https://bramp.github.io/js-sequence-diagrams/js/sequence-diagram-min.js"></script>
 
 ``` graphA → BA → CC → DB → EB → F```
 
