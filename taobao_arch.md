@@ -6,6 +6,8 @@
  - 水平扩展
  - 跨机房多活
  - 缓存
+
+ 跨域多活数据同步问题，DRC？
 ```
 
 ![img](imgs/t1.jpg)
@@ -50,7 +52,6 @@
 
 #### :whale: 云部署，CDN+SLB+WAF可以由云服务提供，也可以自己搭建，docker+k8s
 ![img](imgs/t15.jpg)
-
 
 
 
