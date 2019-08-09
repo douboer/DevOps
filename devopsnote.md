@@ -52,10 +52,6 @@ WAF价格高出SLB好多
 Nginx vs. LVS vs. haproxy vs. DNS
 
 
-<script src="https://bramp.github.io/js-sequence-diagrams/js/webfont.js"></script>
-<script src="https://bramp.github.io/js-sequence-diagrams/js/snap.svg-min.js"></script>
-<script src="https://bramp.github.io/js-sequence-diagrams/js/underscore-min.js"></script>
-<script src="https://bramp.github.io/js-sequence-diagrams/js/sequence-diagram-min.js"></script>
 
 ``` graphA → BA → CC → DB → EB → F```
 
@@ -71,3 +67,5 @@ Alice->Bob: Hello Bob, how are you?
 Note right of Bob: Bob thinks
 Bob-->Alice: I am good thanks!
 ?```
+
+* [markdown参考](https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#4-%E6%B3%A8%E8%84%9A)
