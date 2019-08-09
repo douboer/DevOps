@@ -89,6 +89,7 @@ WAF价格高出SLB好多
     Packet IN    dest ip:LVS VIP->RS ip，src ip:CLent IP->LVS内网IP
     Packet OUT   dest ip:LVS内网IP->Clent IP, src ip: RS IP->LVS VIP
 
+```
          +----------------  --+ PC/CLENT+-   ---------------------+
      requst                 |            |                        |
          |                  +------------+                        |
@@ -107,6 +108,7 @@ dest:rs ip                   +---------------+               dest: LVS internal 
         |                    |               |                    |
         +------------------->+     RS        +<-------------------+
                              +---------------+
+```
     
 
 
