@@ -116,36 +116,36 @@ DEST:RS IP                   +---------------+               DEST: LVS INTERNAL 
 
 ---
 #### Nginx vs. LVS vs. haproxy vs. DNS
-   Ngx做LB？优缺点？
-   LVS 模式？优缺点？
-   haproxy怎么做？优缺点
-   DNS作为LVS一种模式
+   - Ngx做LB？优缺点？
+   - LVS 模式？优缺点？
+   - haproxy怎么做？优缺点
+   - DNS作为LVS一种模式
 
 NGX
-  七层
-  正则
-  配置
-  日志
-  做webserver
-  做反向加速缓存
-  http/https/mail
-  社区
+  - 七层
+  - 正则
+  - 配置
+  - 日志
+  - 做webserver
+  - 做反向加速缓存
+  - http/https/mail
+  - 社区
 
-  ? session保持
-  ? 健康检查？url检测
+  - ? session保持
+  - ? 健康检查？url检测
 
 LVS
-  四层
-  流量类型支持度
-  配置性
-  只发请求
-  :x:正则
+  - 四层
+  - 流量类型支持度
+  - 配置性
+  - 只发请求
+  - :x:正则
 
 haproxy
-  session保持
+  - session保持
   
-  处理效率
-  并发
+  - 处理效率
+  - 并发
 
 
   haproxy策略
