@@ -67,3 +67,32 @@ function fancyAlert(arg) {
   }
 }
 ```
+
+
+
+### emoji
+:+1:
+:smile:
+:angry:
+:star:
+:zzz:
+:shit:
+:v:
+:fu:
+:family:
+:dancers:
+:blush:
+:relaxed:
+:imp:
+
+:baby: :woman: :man:
+
+:heart: :kiss: :ear: :nose:
+:two_hearts:
+
+:sunny: :cloud: :zap:
+
+:frog: :bug:
+
+
+
