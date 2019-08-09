@@ -7,7 +7,7 @@
 
 Mycat与以上中间件的对比如下表所示。
 
-对比项目|Mycat|Mango|Coba|Heisenberg|Atlas|Amoeba
+#### 对比项目|Mycat|Mango|Coba|Heisenberg|Atlas|Amoeba
 ----|-----|-----|----|----------|----|----
 数据切片|支持|支持|支持|支持|支持|支持
 读写分离|支持|支持|支持|支持|支持|支持
