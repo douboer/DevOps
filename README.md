@@ -6,6 +6,7 @@
 
 ## 架构
 * [如何为企业快速设计高可用的阿里云架构](https://blog.51cto.com/ganbing/2103694)
+* [taobao架构演进note](taobao_arch.md)
 
 ## 数据库
 
@@ -25,9 +26,4 @@
 * k8s
 * ansible
 
-## markdown
- * [markdown lab](mdlab.md)
- * [asciiflow](http://asciiflow.com/)
- * [markdown参考](https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#4-%E6%B3%A8%E8%84%)
- * [github emoji](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#people)
 
