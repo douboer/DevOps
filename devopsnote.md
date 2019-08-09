@@ -148,14 +148,14 @@ haproxy
   并发
 
   haproxy策略
-    :1: roundrobin
-    :2: static-rr 权重 :star:
-    :3: leastconn 最少连接者先处理 :star:
-    :4: source 表示根据请求源IP，这个跟Nginx的IP_hash机制类似，我们用其作为解决session问题的一种方法 :star:
-    :5: ri 表示根据请求的URI
-    :6: rl_param 表示根据请求的URl参数'balance url_param' requires an URL parameter name
-    :7: hdr(name) 表示根据HTTP请求头来锁定每一次HTTP请求
-    :8: rdp-cookie(name) 表示根据据cookie(name)来锁定并哈希每一次TCP请求
+    :one: roundrobin
+    :two: static-rr 权重 :star:
+    :three: leastconn 最少连接者先处理 :star:
+    :four: source 表示根据请求源IP，这个跟Nginx的IP_hash机制类似，我们用其作为解决session问题的一种方法 :star:
+    :five: ri 表示根据请求的URI
+    :six: rl_param 表示根据请求的URl参数'balance url_param' requires an URL parameter name
+    :seven hdr(name) 表示根据HTTP请求头来锁定每一次HTTP请求
+    :eight: rdp-cookie(name) 表示根据据cookie(name)来锁定并哈希每一次TCP请求
 
 
 参考
