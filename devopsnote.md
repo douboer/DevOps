@@ -131,12 +131,31 @@ NGX
   http/https/mail
   社区
 
-  :unicorn: ? session保持 <br>
-  :unicorn: ? 健康检查？url检测
+  ? session保持
+  ? 健康检查？url检测
 
 LVS
+  四层
+  流量类型支持度
+  配置性
+  只发请求
+  :x:正则
 
+haproxy
+  session保持
+  
+  处理效率
+  并发
 
+haproxy策略
+    :1: roundrobin，表示简单的轮询，这个不多说，这个是负载均衡基本都具备的； 
+    :2: static-rr，表示根据权重，建议关注； 
+    :3: leastconn，表示最少连接者先处理，建议关注； 
+    :4: source，表示根据请求源IP，这个跟Nginx的IP_hash机制类似，我们用其作为解决session问题的一种方法，建议关注； 
+    :5: ri，表示根据请求的URI； 
+    :6: rl_param，表示根据请求的URl参数’balance url_param’ requires an URL parameter name； 
+    :7: hdr(name)，表示根据HTTP请求头来锁定每一次HTTP请求； 
+    :8: rdp-cookie(name)，表示根据据cookie(name)来锁定并哈希每一次TCP请求。
 
 
 
