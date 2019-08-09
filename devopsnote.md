@@ -1,4 +1,3 @@
-mermaid: true
 
 ## devops笔记
 
@@ -13,12 +12,15 @@ keepalived给HA提供保证，基于我们熟悉的VRRP协议，做容灾是很�
 
 阿里云用LVS+Tengine SLB，ECS直接挂LVS，四层监听的流量直接由LVS转发到ECS，7层监听的流量会经过LVS到Tenigine再到用户ECS
 
+
 问题
  - DNS不足？
  - upstream 反向代理关系？
  - LVS是什么，怎么实现？
  - 天翼云没有A10？LB怎么做
  - 跨域机房双活怎么做？
+ - 性能问题？ QPS
+ - docker化下与虚拟机下LB思路不同？
 
 ---
 阿里服务
@@ -90,32 +92,36 @@ WAF价格高出SLB好多
     Packet OUT   dest ip:LVS内网IP->Clent IP, src ip: RS IP->LVS VIP
 
 ```
+                             FULLNAT MODE
          +----------------  --+ PC/CLENT+-   ---------------------+
-     requst                 |            |                        |
+     REQUST                 |            |                        |
          |                  +------------+                        |
- srcip:clientip                                                 response
- destip:l^s vip                                                   |
-         |                                                    src:LVS vip
-         |                                                    dest:client ip
+ SRCIP:CLIENTIP                                                 RESPONSE
+ DESTIP:L^S VIP                                                   |
+         |                                                    SRC:LVS VIP
+         |                                                    DEST:CLIENT IP
          |                                                        |
 +--------v------+             +--------------+             +------v--------+
-| Dnat+snat     |             |   LVS        |            ++               |
-|               +-------------+              +-------------+snat+dnat      |
+| DNAT+SNAT     |             |   LVS        |            ++               |
+|               +-------------+              +-------------+SNAT+DNAT      |
 +-------+-------+             +--------------+             +------+--------+
         |                                                         |
-src:lvs internal ip                                          src:rs ip
-dest:rs ip                   +---------------+               dest: LVS internal ip
+SRC:LVS INTERNAL IP                                          SRC:RS IP
+DEST:RS IP                   +---------------+               DEST: LVS INTERNAL IP
         |                    |               |                    |
         +------------------->+     RS        +<-------------------+
                              +---------------+
 ```
-    
 
 
 ---
-Nginx vs. LVS vs. haproxy vs. DNS
-9A)
-
+#### Nginx vs. LVS vs. haproxy vs. DNS
+<li>
+   Ngx做LB？优缺点？
+   LVS 模式？优缺点？
+   haproxy怎么做？优缺点
+   DNS作为LVS一种模式
+</li>
 
 
 
