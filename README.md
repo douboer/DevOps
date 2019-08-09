@@ -29,4 +29,5 @@
  * [markdown lab](mdlab.md)
  * [asciiflow](http://asciiflow.com/)
  * [markdown参考](https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#4-%E6%B3%A8%E8%84%)
+ * [github emoji](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#people)
 
