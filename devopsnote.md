@@ -2,19 +2,21 @@ mermaid: true
 
 ## devops笔记
 
-#### LB & HA
+#### LB & HA & 容灾
 hard LB A10，F5，据说A10的财务状况并不好啊，可见以后是SLB天下了
 SLB DNS、NGX、LVS、HAproxy结合keepalived搭建
 NGX利用反向代理upstream来实现负载均衡
 据说Tengine在NGX基础进行了改进，但用户接受度并不高，不利于产品良性迭代，HA更重要
-keepalived给HA提供保证，基于我们熟悉的VRRP协议
+keepalived给HA提供保证，基于我们熟悉的VRRP协议，做容灾是很好的
+
+四层负载均衡有LVS，七层负载均衡有Haproxy、Nginx，目前用的最多的就是这三种了
 
 阿里云用LVS+Tengine SLB，ECS直接挂LVS，四层监听的流量直接由LVS转发到ECS，7层监听的流量会经过LVS到Tenigine再到用户ECS
 
 问题
  - DNS不足？
  - upstream 反向代理关系？
- - LVS是什么，怎么怎么实现？
+ - LVS是什么，怎么实现？
  - 天翼云没有A10？LB怎么做
  - 跨域机房双活怎么做？
 
@@ -32,21 +34,17 @@ SLB
 ```
 +---------------------------------------------------------------+
 |                      +--------------+                         |
-|                      |   CLOUD      |                         |
-|            ----------|              |----------               |
+|            ----------|   CLOUD      |----------               |
 |            |         +--------------+         |               |
 |  +---------+---------+             +--------------------+     |
 |  |         |         |             |lvs cluster         |     |
 |  | LVS cluster       |             |          |         |     |
-|  |         |         |             |          |         |     |
 |  |         |tengine cluster        |          tengine cluster |
-|  |         |         |             |          |         |     |
 |  +---------+---------+             +----------+---------+     |
 |                                                               |
 |                          SLB cluster                          |
 +---------------------------------------------------------------+
 ```
-                  
 
 CDN
 <li>内容分发、复制、cache
@@ -56,5 +54,75 @@ CDN
 WAF价格高出SLB好多
 
 ---
+#### 容器云LB技术
+
+几个基本概念：
+1. RSS/RPS/RFS/XPS的基本认识
+- 对NIC出入数据的优化
+- RSS(receive side scaling)，数据队列均衡到不同核，硬件实现
+- RPS(Receive Packet Steering)，数据队列均衡到不同核，软件实现
+  RSS和RPS都是网卡为了在接受数据包的时候使用多核架构而进行的性能增强，RSS是在硬件层面而RPS在软件层面
+- RFS(Receive Flow Steering) 保证接受中断CPU内核正好是用户处理的CPU，避免转换开销
+  XPS(Transmit Packet Steering) 保证发送软中断CPU内核正好是用户处理的CPU，避免转换开销
+
+一句话，这4个东西：
+  - 保证入出数据在不同核之间的均衡，
+  - 保证入出数据中断和处理在同一个核心上
+
+2. PREROUTING/POSTROUTING/SNAT/DNAT
+  - 源地址发送数据--> {PREROUTING-->路由规则--> POSTROUTING}-->目的地址接收到数据
+    PREROUTING是“路由规则”之前的动作，POSTROUTING是“路由规则”之后的动作
+  - DNAT在PREROUTING，SNAT在POSTROUTING
+  - SNAT,数据包从网卡发送出去的时候，把数据包中的源地址替换，这样，接收方认为来源被替换IP
+    DNAT,数据包从网卡发送出去的时候，修改目的IP，你想访问A，DNAT后把访问A的数据包修改为访问B
+
+3. LVS模式
+  - DR
+    改写目的MAC为RS MAC，LVS对用户透明，不该IP，返回直接访问CLient
+    LVS&RS需在同一个二层
+  - NAT
+    来回都走LVS，LVS是瓶颈
+    LVS&RS需在同一个二层
+  - TUNNEL
+    只能Linux内核支持
+  - Full-NAT
+    Packet IN    dest ip:LVS VIP->RS ip，src ip:CLent IP->LVS内网IP
+    Packet OUT   dest ip:LVS内网IP->Clent IP, src ip: RS IP->LVS VIP
+
+         +----------------  --+ PC/CLENT+-   ---------------------+
+     requst                 |            |                        |
+         |                  +------------+                        |
+ srcip:clientip                                                 response
+ destip:l^s vip                                                   |
+         |                                                    src:LVS vip
+         |                                                    dest:client ip
+         |                                                        |
++--------v------+             +--------------+             +------v--------+
+| Dnat+snat     |             |   LVS        |            ++               |
+|               +-------------+              +-------------+snat+dnat      |
++-------+-------+             +--------------+             +------+--------+
+        |                                                         |
+src:lvs internal ip                                          src:rs ip
+dest:rs ip                   +---------------+               dest: LVS internal ip
+        |                    |               |                    |
+        +------------------->+     RS        +<-------------------+
+                             +---------------+
+    
+
+
+---
 Nginx vs. LVS vs. haproxy vs. DNS
 9A)
+
+
+
+
+
+
+参考
+1. [高性能负载均衡设计与实现](https://zhuanlan.zhihu.com/p/29949340)
+2. [容器云负载均衡之三：RSS、RPS、RFS和XPS调整](https://blog.csdn.net/cloudvtech/article/details/80182074)
+2. [从一个开发的角度看负载均衡和LVS](https://blog.csdn.net/daiyudong2020/article/details/51611118)
+2. []()
+2. []()
+2. []()
