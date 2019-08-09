@@ -155,7 +155,7 @@ haproxy
     <br> :four: source 表示根据请求源IP，这个跟Nginx的IP_hash机制类似，我们用其作为解决session问题的一种方法 :star:
     <br> :five: ri 表示根据请求的URI
     <br> :six: rl_param 表示根据请求的URl参数'balance url_param' requires an URL parameter name
-    <br> :seven hdr(name) 表示根据HTTP请求头来锁定每一次HTTP请求
+    <br> :seven: hdr(name) 表示根据HTTP请求头来锁定每一次HTTP请求
     <br> :eight: rdp-cookie(name) 表示根据据cookie(name)来锁定并哈希每一次TCP请求
 
 
