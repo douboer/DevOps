@@ -149,7 +149,7 @@ haproxy
 
 
   haproxy策略
-    :one: roundrobin
+    <br> :one: roundrobin
     <br> :two: static-rr 权重 :star:
     <br> :three: leastconn 最少连接者先处理 :star:
     <br> :four: source 表示根据请求源IP，这个跟Nginx的IP_hash机制类似，我们用其作为解决session问题的一种方法 :star:
