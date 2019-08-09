@@ -59,7 +59,7 @@ WAF价格高出SLB好多
 #### 容器云LB技术
 
 几个基本概念：
-1. RSS/RPS/RFS/XPS的基本认识
+##### 1. RSS/RPS/RFS/XPS的基本认识
 - 对NIC出入数据的优化
 - RSS(receive side scaling)，数据队列均衡到不同核，硬件实现
 - RPS(Receive Packet Steering)，数据队列均衡到不同核，软件实现
@@ -71,14 +71,14 @@ WAF价格高出SLB好多
   - 保证入出数据在不同核之间的均衡，
   - 保证入出数据中断和处理在同一个核心上
 
-2. PREROUTING/POSTROUTING/SNAT/DNAT
+##### 2. PREROUTING/POSTROUTING/SNAT/DNAT
   - 源地址发送数据--> {PREROUTING-->路由规则--> POSTROUTING}-->目的地址接收到数据
     PREROUTING是“路由规则”之前的动作，POSTROUTING是“路由规则”之后的动作
   - DNAT在PREROUTING，SNAT在POSTROUTING
   - SNAT,数据包从网卡发送出去的时候，把数据包中的源地址替换，这样，接收方认为来源被替换IP
     DNAT,数据包从网卡发送出去的时候，修改目的IP，你想访问A，DNAT后把访问A的数据包修改为访问B
 
-3. LVS模式
+##### 3. LVS模式
   - DR
     改写目的MAC为RS MAC，LVS对用户透明，不该IP，返回直接访问CLient
     LVS&RS需在同一个二层
