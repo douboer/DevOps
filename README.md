@@ -4,6 +4,9 @@
 ## note
  * [DevOps笔记](devopsnote.md)
 
+## mutiple sites disaster recovery
+ * [异地容灾](disaster_recovery.md)
+
 ## 架构
 * [如何为企业快速设计高可用的阿里云架构](https://blog.51cto.com/ganbing/2103694)
 * [taobao架构演进note](taobao_arch.md)
