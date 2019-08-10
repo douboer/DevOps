@@ -46,13 +46,12 @@ mycat DAL中间件 数据访问层(Data Access Layer)
 缩表，减少记录数
 1. 枚举法：
    通过在配置文件中配置可能的枚举id，自己配置分片，适用于按照省份或者区县来拆分数据类业务
-
-   ```
+```
   <rule>
   <columns>province_id</columns>
   <algorithm>enum-int</algorithm>
   </rule>
-   ```
+```
 2. 固定分片hash算法
 ```
   <tableRule name="rule1">
