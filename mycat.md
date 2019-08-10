@@ -31,7 +31,9 @@ mycat DAL中间件 数据访问层(Data Access Layer)
   - 官方规划2.0版本<b>:star:通过Mycat Balance 替代第三方的Haproxy，LVS等第三方高可用，完整的兼容Mycat集群节点的动态上下线。</b>
 - <b>缺点</b>
   - 事务性XA较弱，:question:事务性
-  - 
+    关于分布式事务性的描述参考![分布式事务](https://www.cnblogs.com/zengkefu/p/5742617.html)
+  - 分页查询，limit n，只查到某个分片上的topn，或者后区间数据可能落在不同分片上，可能查询缓慢，DBA可优化
+    [参](https://www.cnblogs.com/leeSmall/p/9539370.html)
 
 #### :dvd: 垂直切分
    按业务规划细分
