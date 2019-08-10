@@ -12,7 +12,7 @@
 * [taobao架构演进note](taobao_arch.md)
 
 ## 数据库
-* [myCat note](mycat.md)
+* [myCat笔记](mycat.md)
 * [数据库笔记](database.md)
 * [myCat github docs](https://github.com/MyCATApache/Mycat-doc)
 

@@ -96,6 +96,20 @@ mycat DAL中间件 数据访问层(Data Access Layer)
 9. 字符串拆分hash解析
 10. 一致性hash
 
+#### :dvd: myCat HA
+
+- keepalived & haproxy装在一起
+- keepalived 负责抢VIP
+- haproxy 负责分发给可用myCat
+
+
+![img](myCatHa1.png)
+![img](myCatHa.png)
+
+
+[myCat HA](https://blog.csdn.net/l1028386804/article/details/76397064)
+
+
 ### :dvd: 附图
 ![img](imgs/db/1508220824685.png) <br><br><br>
 ![img](imgs/db/1508224104762.png) <br><br><br>
