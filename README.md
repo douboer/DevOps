@@ -1,10 +1,12 @@
 
 # DevOps
 
- * [DevOps笔记](hanote.md)
+
+### Load balance & HA
+ * [LB&HA笔记](hanote.md)
 
 ### mutiple sites disaster recovery
- * [异地容灾](disaster_recovery.md)
+ * [多活/异地容灾](disaster_recovery.md)
 
 ### 架构
 * [taobao架构演进note](taobao_arch.md)
