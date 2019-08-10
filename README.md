@@ -12,6 +12,9 @@
 * [taobao架构演进note](taobao_arch.md)
 
 ## 数据库
+* [myCat note](mycat.md)
+* [数据库笔记](database.md)
+* [myCat github docs](https://github.com/MyCATApache/Mycat-doc)
 
 ## 微服务
  * [什么是Sentinel?它能做什么](https://blog.csdn.net/u012190514/article/details/81383698)

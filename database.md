@@ -1,12 +1,8 @@
-
 ## 数据库
 
-
 #### 中间件
-[mycat note](mycat.md)
-[mycat github docs](https://github.com/MyCATApache/Mycat-doc)
-
 Mycat与以上中间件的对比如下表所示。
+* [myCat note](mycat.md)
 
 对比项目|Mycat|Mango|Coba|Heisenberg|Atlas|Amoeba
 ----|-----|-----|----|----------|----|----
@@ -25,4 +21,3 @@ DAL
 MySQL DAL（Data Access Layer）数据访问层
 
 分表：如UID mod 2分2张表存储，查询时同样操作
-
