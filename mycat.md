@@ -28,6 +28,7 @@ mycat DAL中间件 数据访问层(Data Access Layer)
   - 负载均衡，HA
   - 分表分库，主要是水平切分
   - 其他：基于NIO-并发高，
+  - 官方规划2.0版本<b>:star:通过Mycat Balance 替代第三方的Haproxy，LVS等第三方高可用，完整的兼容Mycat集群节点的动态上下线。<b>
 - <b>缺点</b>
   - 事务性XA较弱，:question:事务性
   - 
