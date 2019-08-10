@@ -103,8 +103,8 @@ mycat DAL中间件 数据访问层(Data Access Layer)
 - haproxy 负责分发给可用myCat
 
 
-![img](myCatHa1.png)
-![img](myCatHa.png)
+![img](imgs/db/myCatHa1.png)
+![img](imgs/db/myCatHa.png)
 
 
 [myCat HA](https://blog.csdn.net/l1028386804/article/details/76397064)
