@@ -1,7 +1,6 @@
 
-## devops笔记
+## LB & HA & 容灾
 
-#### LB & HA & 容灾
 hard LB A10，F5，据说A10的财务状况并不好啊，可见以后是SLB天下了
 SLB DNS、NGX、LVS、HAproxy结合keepalived搭建
 NGX利用反向代理upstream来实现负载均衡
@@ -11,7 +10,6 @@ keepalived给HA提供保证，基于我们熟悉的VRRP协议，做容灾是很�
 四层负载均衡有LVS，七层负载均衡有Haproxy、Nginx，目前用的最多的就是这三种了
 
 阿里云用LVS+Tengine SLB，ECS直接挂LVS，四层监听的流量直接由LVS转发到ECS，7层监听的流量会经过LVS到Tenigine再到用户ECS
-
 
 问题
  - DNS不足？
@@ -113,7 +111,6 @@ DEST:RS IP                   +---------------+               DEST: LVS INTERNAL 
                              +---------------+
 ```
 
-
 ---
 #### Nginx vs. LVS vs. haproxy vs. DNS
    - Ngx做LB？优缺点？
@@ -131,8 +128,8 @@ NGX
   - http/https/mail
   - 社区
 
-  - ? session保持
-  - ? 健康检查？url检测
+  - session保持 :question:
+  - 健康检查？url检测 :question:
 
 LVS
   - 四层
@@ -163,6 +160,3 @@ haproxy
 1. [高性能负载均衡设计与实现](https://zhuanlan.zhihu.com/p/29949340)
 2. [容器云负载均衡之三：RSS、RPS、RFS和XPS调整](https://blog.csdn.net/cloudvtech/article/details/80182074)
 2. [从一个开发的角度看负载均衡和LVS](https://blog.csdn.net/daiyudong2020/article/details/51611118)
-2. []()
-2. []()
-2. []()

@@ -32,7 +32,7 @@
 #### :whale: LVS+F5 做4层LB，myCAT表拆分
 ![img](imgs/t8.jpg)
 
-#### :whale: LB DNS RR轮训 跨机房负载均衡 机房级别水平扩展
+#### :whale: LB DNS RR轮询 跨机房负载均衡 机房级别水平扩展
 ![img](imgs/t9.jpg)
 
 #### :whale: 海量数据 noSQL，hBase
