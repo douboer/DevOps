@@ -1,5 +1,5 @@
 
-## mycat
+## myCat
 
 ![img](imgs/db/mycat_arch.jpg)
 
@@ -109,7 +109,7 @@ mycat DAL中间件 数据访问层(Data Access Layer)
 3. HAProxy负责将对vip的请求分发到Mycat集群节点上，起到负载均衡的作用。同时HAProxy也能检测到Mycat是否存活，HAProxy只会将请求转发到存活的Mycat上。
 4. 如果Keepalived+HAProxy高可用集群中的一台服务器宕机，集群中另外一台服务器上的Keepalived会立刻抢占vip并接管服务，此时抢占了vip的HAProxy节点可以继续提供服务。
 5. 如果一台Mycat服务器宕机，HAPorxy转发请求时不会转发到宕机的Mycat上，所以Mycat依然可用。
-综上：Mycat的高可用及负载均衡由HAProxy来实现，而HAProxy的高可用，由Keepalived来实现。
+综上：Mycat的高可用及负载均衡由HAProxy来实现，而HAProxy的高可用，由Keepalived来实现。<br>
 [myCat HA reference](https://blog.csdn.net/l1028386804/article/details/76397064)
 
 ### :dvd: 附图
