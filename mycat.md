@@ -22,7 +22,7 @@ mycat DAL中间件 数据访问层(Data Access Layer)
    mysql之间要keepalived吗:question:
 
 ---
-- <b>主要优势</b>
+- <b>优势</b>
   [要点都在这了:joy:](http://www.mycat.io/)
   - 读写分离
   - 负载均衡，HA
@@ -79,7 +79,6 @@ mycat DAL中间件 数据访问层(Data Access Layer)
       </rule>
   </tableRule>
   ```
-
 4. 求模法
   ```
       <columns>user_id</columns>
@@ -88,14 +87,11 @@ mycat DAL中间件 数据访问层(Data Access Layer)
 5. 日期列分区法
    起始时间
    分区时间间隔
-
 6. 通配取模 
 7. ASCII码求模通配
    %n值分n个分区
-
 8. 编程指定
    自定义算法
-
 9. 字符串拆分hash解析
 10. 一致性hash
 
@@ -129,4 +125,3 @@ mycat DAL中间件 数据访问层(Data Access Layer)
 ![img](imgs/db/1508234525067.png) <br><br><br>
 ![img](imgs/db/1508234545534.png) <br><br><br>
 ![img](imgs/db/1508234554521.png) <br><br><br>
-
