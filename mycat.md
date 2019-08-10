@@ -12,11 +12,13 @@ mycat DAL中间件 数据访问层(Data Access Layer)
  - 父子关系，外键关联关系，相当于垂直切分，ER表
  - mycat有什么缺点
 
+```
            |-> mysql
            |
  - mycat---|-> mysql
            |
            |-> mysql
+```
    mysql之间要keepalived吗:question:
 
 ---
