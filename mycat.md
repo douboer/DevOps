@@ -1,18 +1,39 @@
 
 ## mycat
 
-#### :dvd: 几个问题
- - mycat能做什么
- - 逻辑表&逻辑库，优点？
+mycat DAL中间件 数据访问层(Data Access Layer)
+
+#### :dvd: some questions
+ - mycat能做什么，优点是什么
+ - 逻辑表&逻辑库？schema
  - mod水平切分，其他手段？
  - 垂直切分？
  - 自动处理切分？策略？
  - 父子关系，外键关联关系，相当于垂直切分，ER表
  - mycat有什么缺点
 
+           |-> mysql
+           |
+ - mycat---|-> mysql
+           |
+           |-> mysql
+   mysql之间要keepalived吗:question:
+
+---
+- <b>主要优势</b>
+  [要点都在这了:joy:](http://www.mycat.io/)
+  - 读写分离
+  - 负载均衡，HA
+  - 分表分库，主要是水平切分
+  - 其他：基于NIO-并发高，
+- <b>缺点</b>
+  - 事务性XA较弱，:question:事务性
+  - 
+
 #### :dvd: 垂直切分
-按业务规划细分
-不缩表，减少字段数
+   按业务规划细分
+   不缩表，减少字段数
+   不能算myCat的优势
 
 #### :dvd: 水平切分&规则
 缩表，减少记录数
@@ -103,5 +124,4 @@
 ![img](imgs/db/1508234525067.png) <br><br><br>
 ![img](imgs/db/1508234545534.png) <br><br><br>
 ![img](imgs/db/1508234554521.png) <br><br><br>
-
 
