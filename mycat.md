@@ -1,6 +1,8 @@
 
 ## mycat
 
+![img](imgs/db/mycat_arch.jpg)
+
 mycat DAL中间件 数据访问层(Data Access Layer)
 
 #### :dvd: some questions
