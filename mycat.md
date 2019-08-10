@@ -72,19 +72,19 @@ mycat DAL中间件 数据访问层(Data Access Layer)
 ```
 3. 范围约定
   预先制定可能的id范围到某个分片
-  ```
+```
   <tableRule name="auto-sharding-long">
       <rule>
         <columns>user_id</columns>
         <algorithm>rang-long</algorithm>
       </rule>
   </tableRule>
-  ```
+```
 4. 求模法
-  ```
+```
       <columns>user_id</columns>
       <algorithm>mod-long</algorithm>
-  ```
+```
 5. 日期列分区法
    起始时间
    分区时间间隔
