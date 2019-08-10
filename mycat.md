@@ -102,13 +102,15 @@ mycat DAL中间件 数据访问层(Data Access Layer)
 - keepalived 负责抢VIP
 - haproxy 负责分发给可用myCat
 
-
 ![img](imgs/db/myCatHa1.png)
 ![img](imgs/db/myCatHa.png)
-
-
-[myCat HA](https://blog.csdn.net/l1028386804/article/details/76397064)
-
+1. HAProxy实现了Mycat多节点的集群高可用和负载均衡，而HAProxy自身的高可用则可以通过Keepalived来实现。因此，HAProxy主机上要同时安装HAProxy和Keepalived，Keepalived负责为该服务器抢占vip（虚拟ip，图中的192.168.209.130），抢占到vip后，对该主机的访问可以通过原来的ip（192.168.209.135）访问，也可以直接通过vip（192.168.209.130）访问。
+2. Keepalived抢占vip有优先级，在keepalived.conf配置中的priority属性决定。但是一般哪台主机上的Keepalived服务先启动就会抢占到vip，即使是slave，只要先启动也能抢到（要注意避免Keepalived的资源抢占问题）。
+3. HAProxy负责将对vip的请求分发到Mycat集群节点上，起到负载均衡的作用。同时HAProxy也能检测到Mycat是否存活，HAProxy只会将请求转发到存活的Mycat上。
+4. 如果Keepalived+HAProxy高可用集群中的一台服务器宕机，集群中另外一台服务器上的Keepalived会立刻抢占vip并接管服务，此时抢占了vip的HAProxy节点可以继续提供服务。
+5. 如果一台Mycat服务器宕机，HAPorxy转发请求时不会转发到宕机的Mycat上，所以Mycat依然可用。
+综上：Mycat的高可用及负载均衡由HAProxy来实现，而HAProxy的高可用，由Keepalived来实现。
+[myCat HA reference](https://blog.csdn.net/l1028386804/article/details/76397064)
 
 ### :dvd: 附图
 ![img](imgs/db/1508220824685.png) <br><br><br>
