@@ -3,7 +3,8 @@
 
 
 #### 中间件
-[mycat](mycat.md)
+[mycat note](mycat.md)
+[mycat github docs](https://github.com/MyCATApache/Mycat-doc)
 
 Mycat与以上中间件的对比如下表所示。
 
@@ -23,5 +24,5 @@ MySQL协议|前后端支持|JDBC|前端支持|前后端支持|前后端支持|JD
 DAL
 MySQL DAL（Data Access Layer）数据访问层
 
-分表：如UID%10分10张表存储，查询时同样操作
+分表：如UID mod 2分2张表存储，查询时同样操作
 
