@@ -22,6 +22,7 @@
 
 ### 消息系统
  * kafka
+ * rabbitMQ
 
 ### 统一认证
  * ldap
@@ -34,7 +35,6 @@
 ### 所谓中台
 * [中台笔记](zhongtai.md)
 
-
 ### 工具
 * chef
 * puppet
@@ -45,8 +45,7 @@
 
 
 
-
-## reference
+## references
 * [如何为企业快速设计高可用的阿里云架构](https://blog.51cto.com/ganbing/2103694)
 * [myCat github docs](https://github.com/MyCATApache/Mycat-doc)
 * [LDAP概念和原理介绍](https://www.cnblogs.com/wilburxu/p/9174353.html)
