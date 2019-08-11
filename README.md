@@ -31,6 +31,10 @@
 
 ### 自动化测试
 
+### 所谓中台
+* [中台笔记](zhongtai.md)
+
+
 ### 工具
 * chef
 * puppet
@@ -38,6 +42,7 @@
 * Splunk
 * k8s
 * ansible
+
 
 
 
