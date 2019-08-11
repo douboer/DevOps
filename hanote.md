@@ -159,4 +159,6 @@ haproxy
 参考
 1. [高性能负载均衡设计与实现](https://zhuanlan.zhihu.com/p/29949340)
 2. [容器云负载均衡之三：RSS、RPS、RFS和XPS调整](https://blog.csdn.net/cloudvtech/article/details/80182074)
-2. [从一个开发的角度看负载均衡和LVS](https://blog.csdn.net/daiyudong2020/article/details/51611118)
+3. [从一个开发的角度看负载均衡和LVS](https://blog.csdn.net/daiyudong2020/article/details/51611118)
+4. [HA接入层构架](https://cyningsun.github.io/02-03-2019/access-layer-architecture.html)
+
