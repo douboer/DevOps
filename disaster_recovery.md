@@ -25,8 +25,11 @@
    chaos monkey
    monkeyking
 
-
 服务注册中心
+
+
+TBC :clock1::clock2::clock3::clock4::clock5::clock6::clock7::clock8::clock9::clock10:
+
 
 * references
 1. [混沌工程工具ChaosBlade](https://www.cnblogs.com/pigpdong/p/10932415.html)
@@ -36,8 +39,11 @@
 1. [饿了么异地多活技术实现2](https://zhuanlan.zhihu.com/p/32587960)
 1. [饿了么异地多活技术实现3](https://zhuanlan.zhihu.com/p/33430869)
 1. [饿了么异地多活技术实现4](https://zhuanlan.zhihu.com/p/34958596)
-1. [](https://blog.csdn.net/hxpjava1/article/details/86592360)
-1. [](https://www.sohu.com/a/158859741_444159)
+1. [ref](https://blog.csdn.net/hxpjava1/article/details/86592360)
+1. [ref](https://www.sohu.com/a/158859741_444159)
+1. [异地多活 IDC 机房架构](https://www.upyun.com/opentalk/377.html)
+1. [异地多活场景下的数据同步之道](http://www.tianshouzhi.com/api/tutorials/canal/404)
+
 
 
 
