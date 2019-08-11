@@ -44,6 +44,8 @@
 * ansible
 
 
+Hystrix  断路器 熔断器
+
 
 ## references
 * [如何为企业快速设计高可用的阿里云架构](https://blog.51cto.com/ganbing/2103694)
