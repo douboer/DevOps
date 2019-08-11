@@ -145,7 +145,7 @@ haproxy
   - 并发
 
 
-  haproxy策略
+haproxy策略
     <br> :one: roundrobin
     <br> :two: static-rr 权重 :star:
     <br> :three: leastconn 最少连接者先处理 :star:
