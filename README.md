@@ -21,8 +21,12 @@
  * redis
 
 ### 消息系统
- * kafka
  * rabbitMQ
+
+### 日志&监控
+ * kafka
+ * flume
+ * openTSDB
 
 ### 统一认证
  * ldap
