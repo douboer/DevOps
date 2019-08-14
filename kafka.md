@@ -17,6 +17,19 @@ kafka通过zookeeper来存储集群的meta信息
 
 ### rocketMQ
 
+![img](imgs/rocketmq.png)
+![img](imgs/rocketmq.jpeg)
+
+心跳机制
+- 自带name service，脱离zookeeper，自动Master选举
+- broke与所有nameSVR保持心跳请求，30s间隔，2min无心跳，nameSVR判定broke下线，调整topic与broke关系
+- Consumer跟Broker是长连接，会每隔30秒发心跳信息到Broker。
+  Broker端每10秒检查一次当前存活的Consumer，若发现某个Consumer 2分钟内没有心跳， 就断开与该Consumer的连接，并且向该消费组的其他实例发送通知，触发该消费者集群的负载均衡(rebalance)。
+- producter每30秒从Namesrv获取Topic跟Broker的映射关系，更新到本地内存中。
+  再跟Topic涉及的所有Broker建立长连接，每隔30秒发一次心跳。 
+  在Broker端也会每10秒扫描一次当前注册的Producer，如果发现某个Producer超过2分钟都没有发心跳，则断开连接
+
+
 
 ### 实验 & 性能测试 & benchmark
 
@@ -28,9 +41,8 @@ kafka通过zookeeper来存储集群的meta信息
 1. []()
 1. []()
 
-[0](http://www.infoq.com/cn/news/2017/02/RocketMQ-future-idea)
-[1](https://www.infoq.com/articles/alibaba-apache-rocketmq)
-[2](https://github.com/openmessaging/specification/blob/master/usecase.md)
-[3](http://openmessaging.cloud/docs/benchmarks/)
-[4](https://medium.com/@Alibaba_Cloud/rocketmq-into-the-500-000-tps-message-club-357cdde3ed2e)
+[](https://www.infoq.cn/article/2017/02/RocketMQ-future-idea)
+[](https://www.infoq.cn/article/IlP-Jk87KLyw63uDfNA8)
+
+
 
