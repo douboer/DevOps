@@ -13,18 +13,20 @@
 
 ### 数据库
 * [myCat笔记](mycat.md)
-* [数据库笔记](database.md)
-
-### 微服务
+* [数据库中间件](dbmiddleware.md)
+* [数据库](database.md)
 
 ### 缓存
- * redis
+ * [redis]()
+ * [memcached](https://github.com/memcached/memcached)
+
+### 微服务
 
 ### 消息系统
  * rabbitMQ
 
 ### 日志&监控
- * kafka
+* kafka
  * flume
  * openTSDB
 

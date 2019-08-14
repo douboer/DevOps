@@ -1,23 +1,52 @@
-## 数据库
+# 数据库
 
-#### 中间件
-Mycat与以上中间件的对比如下表所示。
-* [myCat note](mycat.md)
-
-对比项目|Mycat|Mango|Coba|Heisenberg|Atlas|Amoeba
-----|-----|-----|----|----------|----|----
-数据切片|支持|支持|支持|支持|支持|支持
-读写分离|支持|支持|支持|支持|支持|支持
-宕机自动切换|支持|不支持|支持|不支持|半支持，影响写|不支持
-MySQL协议|前后端支持|JDBC|前端支持|前后端支持|前后端支持|JDBC
-支持的数据库|MySQL、Oracle、MongoDB、PostgreSQL|MySQL|MySQL|MySQL|MySQL|MySQL、MongoDB
-社区活跃度|高|活跃|停滞|低|中等|停滞
-文档资料|极丰富|较齐全|较齐全|缺少|中等|缺少
-是否开源|开源|开源|开源|开源|开源|开源
-是否支持事务|弱XA|支持|单库强一致、分布式弱事务|单库强一致、多库弱事务|单库强一致、分布式弱事务|不支持
+#### :question:
+- 类型&特点&方向
+- 选型考虑
 
 
-DAL
-MySQL DAL（Data Access Layer）数据访问层
+#### 数据库类型
+```
+- Relational DBMS
+  - oracle,mysql,postgreSQL,hive
+- Key-value stores
+  - redis,memcached
+- Document stores/document-oriented database
+- Graph DBMS
+  - neo4j,Microsoft Azure Cosmos DB
+- Time Series DBMS
+  - InfluxDB,Kdb+,Prometheus,Graphite,RRDtool,OpenTSDB,Druid
+- Object oriented DBMS
+- RDF stores
+- Search engines
+  - Elasticsearch,Splunk
+- Wide column stores
+ - Cassandra,hbase
+- Multivalue DBMS
+- Native XML DBMS
+- Event Stores
+- Content stores
+- Navigational DBMS
+```
 
-分表：如UID mod 2分2张表存储，查询时同样操作
+#### Document stores database
+also called document-oriented database systems, are characterized by their schema-free organization of data.
+Records do not need to have a uniform structure, i.e. different records may have different columns.
+The types of the values a€?a€?of individual columns can be different for each record.
+Columns can have more than one value (arrays).
+Records can have a nested structure.
+Document stores often use internal notations, which can be processed directly in applications, mostly JSON. JSON documents of course can also be stored as pure text in key-value stores or relational database systems. That would, however, require client-side processing of the structures, which has the disadvantage that the features offered by document stores (such as secondary indexes) are not available.
+存储文档数据库，也叫面向文档数据库，主要特点是非结构化、数据的自由组织
+纪录可以非结构化，比如不同纪录中的可以有不同的列，不同列的数据类型也可以不同，列的数据可以是多个值，比如一个array，记录还可以是嵌套结构。
+比如方便直接存储JSON数据，key-value数据库也可以存储JSON数据，但客户需要自己处理数据结构，这样就容易失去JSON数据组织的优点，比如第二个索引
+
+
+![db trend](imgs/db/dbtrend.png)
+
+
+
+
+#### references
+[db ranking](https://db-engines.com/en/ranking)
+[influxDB vs. openTSDB](http://blog.fatedier.com/2016/07/06/test-influxdb-and-opentsdb/
+[openTSDB](http://blog.fatedier.com/2016/07/04/research-of-time-series-database-opentsdb/)

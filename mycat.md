@@ -5,23 +5,28 @@
 
 mycat DAL中间件 数据访问层(Data Access Layer)
 
-#### :dvd: some questions
- - mycat能做什么，优点是什么
- - 逻辑表&逻辑库？schema
- - mod水平切分，其他手段？
- - 垂直切分？
- - 自动处理切分？策略？
- - 父子关系，外键关联关系，相当于垂直切分，ER表
- - mycat有什么缺点
+#### :dvd: some questions :question:
+- mycat能做什么，优点是什么
+- 逻辑表&逻辑库？schema
+- mod水平切分，其他手段？
+- 垂直切分？
+- 自动处理切分？策略？
+- 父子关系，外键关联关系，相当于垂直切分，ER表
+- mycat有什么缺点
+
 
 ```
            |-> mysql
            |
- - mycat---|-> mysql
+- mycat---|-> mysql
            |
            |-> mysql
 ```
+
+- 遗留问题
    mysql之间要keepalived吗:question:
+   benchmark性能测试怎么做:question:
+
 
 ---
 - <b>优势</b>
