@@ -47,6 +47,6 @@ Document stores often use internal notations, which can be processed directly in
 
 
 #### references
-[db ranking](https://db-engines.com/en/ranking)
-[influxDB vs. openTSDB](http://blog.fatedier.com/2016/07/06/test-influxdb-and-opentsdb/
-[openTSDB](http://blog.fatedier.com/2016/07/04/research-of-time-series-database-opentsdb/)
+1. [db ranking](https://db-engines.com/en/ranking)
+1. [influxDB vs. openTSDB](http://blog.fatedier.com/2016/07/06/test-influxdb-and-opentsdb/)
+1. [openTSDB](http://blog.fatedier.com/2016/07/04/research-of-time-series-database-opentsdb/)
