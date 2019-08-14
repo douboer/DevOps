@@ -23,10 +23,10 @@
 ### 微服务
 
 ### 消息系统
+ * kafka
  * rabbitMQ
 
 ### 日志&监控
-* kafka
  * flume
  * openTSDB
 
@@ -37,6 +37,10 @@
 ### 持续集成CI/CD
 
 ### 自动化测试
+
+### 混沌工程 
+  * chaosblade
+  * chaosmonkey
 
 ### 所谓中台
 * [中台笔记](zhongtai.md)
@@ -59,4 +63,6 @@ Hystrix  断路器 熔断器
 * [LDAP概念和原理介绍](https://www.cnblogs.com/wilburxu/p/9174353.html)
 * [什么是Sentinel?它能做什么](https://blog.csdn.net/u012190514/article/details/81383698)
 * [华为架构师8年经验谈：从单体架构到微服务的服务化演进之路](https://sdk.cn/news/4033)
+
+* [ali Chaosblade](https://github.com/chaosblade-io/chaosblade/blob/master/README_CN.md)
 

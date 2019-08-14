@@ -4,9 +4,13 @@
 KISS - Keep It Simple & Stupid；
 ```
 
+数据被快速制造和消费，数据看上去更加无秩序，或叫非结构化，据说超过80%，且持续加速增加，于是新的非关系型DB/noSQL快速崛起
+
+
 #### :question:
-- 类型&特点&方向
-- 选型考虑
+- 类型
+- 特点
+- 选型
 
 
 #### 数据库类型
@@ -46,6 +50,18 @@ That would, however, require client-side processing of the structures, which has
 纪录可以非结构化，比如不同纪录中的可以有不同的列，不同列的数据类型也可以不同，列的数据可以是多个值，比如一个array，记录还可以是嵌套结构。
 比如方便直接存储JSON数据，key-value数据库也可以存储JSON数据，但客户需要自己处理数据结构，这样就容易失去JSON数据组织的优点，比如第二个索引
 
+#### kafka & redis
+
+## 消息系统
+:question:
+- 异步
+- 解耦
+- 顺序
+
+kafka通过zookeeper来存储集群的meta信息
+
+
+
 
 ![db trend](imgs/db/dbtrend.png)
 ![db trend 24 months](imgs/db/dbtrend24m.png)
@@ -56,3 +72,4 @@ That would, however, require client-side processing of the structures, which has
 1. [db ranking](https://db-engines.com/en/ranking)
 1. [influxDB vs. openTSDB](http://blog.fatedier.com/2016/07/06/test-influxdb-and-opentsdb/)
 1. [openTSDB](http://blog.fatedier.com/2016/07/04/research-of-time-series-database-opentsdb/)
+1. [恒丰银行——大数据实时流处理平台](http://www.sohu.com/a/148106853_400678)
