@@ -1,5 +1,9 @@
 # 数据库
 
+```
+KISS - Keep It Simple & Stupid；
+```
+
 #### :question:
 - 类型&特点&方向
 - 选型考虑
@@ -35,14 +39,16 @@ Records do not need to have a uniform structure, i.e. different records may have
 The types of the values a€?a€?of individual columns can be different for each record.
 Columns can have more than one value (arrays).
 Records can have a nested structure.
-Document stores often use internal notations, which can be processed directly in applications, mostly JSON. JSON documents of course can also be stored as pure text in key-value stores or relational database systems. That would, however, require client-side processing of the structures, which has the disadvantage that the features offered by document stores (such as secondary indexes) are not available.
-存储文档数据库，也叫面向文档数据库，主要特点是非结构化、数据的自由组织
+Document stores often use internal notations, which can be processed directly in applications, mostly JSON. 
+JSON documents of course can also be stored as pure text in key-value stores or relational database systems. 
+That would, however, require client-side processing of the structures, which has the disadvantage that the features offered by document stores (such as secondary indexes) are not available.
+<br>存储文档数据库，也叫面向文档数据库，主要特点是非结构化、数据的自由组织
 纪录可以非结构化，比如不同纪录中的可以有不同的列，不同列的数据类型也可以不同，列的数据可以是多个值，比如一个array，记录还可以是嵌套结构。
 比如方便直接存储JSON数据，key-value数据库也可以存储JSON数据，但客户需要自己处理数据结构，这样就容易失去JSON数据组织的优点，比如第二个索引
 
 
 ![db trend](imgs/db/dbtrend.png)
-
+![db trend 24 months](imgs/db/dbtrend24m.png)
 
 
 
