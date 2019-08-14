@@ -37,8 +37,8 @@ kafka通过zookeeper来存储集群的meta信息
 ### references
 1. [rocketmq压测](https://www.cnblogs.com/guazi/p/6661977.html)
 1. [rocketmq github](https://github.com/apache/rocketmq/tree/master/docs/cn)
-1. []()
-1. []()
+1. [](https://blog.csdn.net/javahongxi/article/details/84931747)
+1. [](https://blog.csdn.net/zshake/article/details/77824020)
 1. []()
 
 [](https://www.infoq.cn/article/2017/02/RocketMQ-future-idea)
