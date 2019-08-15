@@ -11,10 +11,10 @@
 
 * [myCat note](mycat.md)
 
-
-mycat|cobar|Atlas|TDDL|heisenberg|Oceanus|vitess|OneProxy
 Mycat与以上中间件的对比如下表所示。
 对比项目|[mycat](https://github.com/MyCATApache/Mycat-doc)|Mango|Cobar|Heisenberg|[Atlas](https://github.com/Qihoo360/Atlas/blob/master/README_ZH.md)|Amoeba
+
+mycat|cobar|Atlas|TDDL|heisenberg|Oceanus|vitess|OneProxy
 ----|-----|-----|----|----------|----|----
 公司|阿里| |阿里|百度|360|
 数据切片|支持|支持|支持|支持|支持|支持
