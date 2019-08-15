@@ -1,7 +1,6 @@
 
 # DevOps
 
-
 ### Load balance & HA
  * [LB&HA笔记](hanote.md)
 
@@ -21,7 +20,7 @@
  * [memcached](https://github.com/memcached/memcached)
 
 ### 微服务
-
+Hystrix  断路器 熔断器
 
 ### 消息系统
  * kafka
@@ -39,9 +38,10 @@
 
 ### 自动化测试
 
-### 混沌工程 
+### 混沌工程 & 故障演练
   * chaosblade
   * chaosmonkey
+  * monkeyking
 
 ### 所谓中台
 * [中台笔记](zhongtai.md)
@@ -54,8 +54,12 @@
 * k8s
 * ansible
 
+### 信息安全体系
+* [信息安全](security.md)
 
-Hystrix  断路器 熔断器
+
+
+
 
 
 ## references
@@ -66,5 +70,4 @@ Hystrix  断路器 熔断器
 * [华为架构师8年经验谈：从单体架构到微服务的服务化演进之路](https://sdk.cn/news/4033)
 
 * [ali Chaosblade](https://github.com/chaosblade-io/chaosblade/blob/master/README_CN.md)
-
 

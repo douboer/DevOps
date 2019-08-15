@@ -18,7 +18,6 @@
 热备是主用负载，多活是多点负载，负载分担
 
 
-
 ### 故障演练
    
    混沌工程
@@ -43,9 +42,4 @@
 1. [ref](https://www.sohu.com/a/158859741_444159)
 1. [异地多活 IDC 机房架构](https://www.upyun.com/opentalk/377.html)
 1. [异地多活场景下的数据同步之道](http://www.tianshouzhi.com/api/tutorials/canal/404)
-
-
-
-
-
 
