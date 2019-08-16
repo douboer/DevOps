@@ -34,16 +34,18 @@ kafka通过zookeeper来存储集群的meta信息
 ### zookeeper
 
 
-
 它是一个分布式服务框架，是Hadoop的一个子项目，主要是用来解决分布式应用中经常遇到的一些数据管理问题，如：统一命名服务、状态同步服务、集群管理、分布式应用配置项的管理等。
 
 
 惊群问题
 
+集群规模增加，读写性能
 
 
-运维参数
 
+
+
+#### 运维参数
 参数名|说明
 ---|---
 clientPort|客户端连接server的端口，即对外服务端口，一般设置为2181吧。 
@@ -85,6 +87,5 @@ jute.maxbuffer|每个节点最大数据量，是默认是1M。这个限制必须
 
 [](https://www.infoq.cn/article/2017/02/RocketMQ-future-idea)
 [](https://www.infoq.cn/article/IlP-Jk87KLyw63uDfNA8)
-
 
 

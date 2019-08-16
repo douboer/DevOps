@@ -54,10 +54,10 @@ CDN
 WAF价格高出SLB好多
 
 ---
-#### 容器云LB技术
+### 容器云LB技术
 
 几个基本概念：
-##### 1. RSS/RPS/RFS/XPS的基本认识
+#### 1. RSS/RPS/RFS/XPS的基本认识
 - 对NIC出入数据的优化
 - RSS(receive side scaling)，数据队列均衡到不同核，硬件实现
 - RPS(Receive Packet Steering)，数据队列均衡到不同核，软件实现
@@ -69,14 +69,14 @@ WAF价格高出SLB好多
   - 保证入出数据在不同核之间的均衡，
   - 保证入出数据中断和处理在同一个核心上
 
-##### 2. PREROUTING/POSTROUTING/SNAT/DNAT
+#### 2. PREROUTING/POSTROUTING/SNAT/DNAT
   - 源地址发送数据--> {PREROUTING-->路由规则--> POSTROUTING}-->目的地址接收到数据
     PREROUTING是“路由规则”之前的动作，POSTROUTING是“路由规则”之后的动作
   - DNAT在PREROUTING，SNAT在POSTROUTING
   - SNAT,数据包从网卡发送出去的时候，把数据包中的源地址替换，这样，接收方认为来源被替换IP
     DNAT,数据包从网卡发送出去的时候，修改目的IP，你想访问A，DNAT后把访问A的数据包修改为访问B
 
-##### 3. LVS模式
+#### 3. LVS模式
   - DR
     改写目的MAC为RS MAC，LVS对用户透明，不该IP，返回直接访问CLient
     LVS&RS需在同一个二层
@@ -112,13 +112,13 @@ DEST:RS IP                   +---------------+               DEST: LVS INTERNAL 
 ```
 
 ---
-#### Nginx vs. LVS vs. haproxy vs. DNS
+### Nginx vs. LVS vs. haproxy vs. DNS
    - Ngx做LB？优缺点？
    - LVS 模式？优缺点？
    - haproxy怎么做？优缺点
    - DNS作为LVS一种模式
 
-NGX
+#### NGX
   - 七层
   - 正则
   - 配置
@@ -131,14 +131,14 @@ NGX
   - session保持 :question:
   - 健康检查？url检测 :question:
 
-LVS
+#### LVS
   - 四层
   - 流量类型支持度
   - 配置性
   - 只发请求
   - :x:正则
 
-haproxy
+#### haproxy
   - session保持
   
   - 处理效率
@@ -156,9 +156,23 @@ haproxy策略
     <br> :eight: rdp-cookie(name) 表示根据据cookie(name)来锁定并哈希每一次TCP请求
 
 
-参考
+#### 关于LVS替代DNS轮询:question:
+- lvs/naproxy+ngx+keepalived基本满足大部分HA需求，大部分情况下构架已经可以满足替代DNS轮询
+- 对极高并发场景，在接入层可以叠加DNS轮询
+[可参见](imgs/t13.jpg)
+
+#### 关于Zookeeper可以替代LVS,NGX:question:
+
+[参考](#keepalived和zookeeper对比)
+
+
+
+### references
 1. [高性能负载均衡设计与实现](https://zhuanlan.zhihu.com/p/29949340)
 2. [容器云负载均衡之三：RSS、RPS、RFS和XPS调整](https://blog.csdn.net/cloudvtech/article/details/80182074)
 3. [从一个开发的角度看负载均衡和LVS](https://blog.csdn.net/daiyudong2020/article/details/51611118)
 4. [HA接入层构架](https://cyningsun.github.io/02-03-2019/access-layer-architecture.html)
+5. [keepalived和zookeeper对比](https://www.cnblogs.com/arjenlee/p/9254219.html)
+
+
 
