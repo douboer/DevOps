@@ -54,7 +54,7 @@ globalOutstandingLimit|最大请求堆积数。默认是1000。ZK运行的时候
 preAllocSize|预先开辟磁盘空间，用于后续写入事务日志。默认是64M，每个事务日志大小就是64M。如果ZK的快照频率较大的话，建议适当减小这个参数。(Java system property:zookeeper.preAllocSize ) 
 snapCount|每进行snapCount次事务日志输出后，触发一次快照(snapshot), 此时，ZK会生成一个snapshot.文件，同时创建一个新的事务日志文件log.。默认是100000.（真正的代码实现中，会进行一定的随机数处理，以避免所有服务器在同一时间进行快照而影响性能）(Java system property:zookeeper.snapCount ) 
 traceFile|用于记录所有请求的log，一般调试过程中可以使用，但是生产环境不建议使用，会严重影响性能。(Java system property:? requestTraceFile ) 
-maxClientCnxns|单个客户端与单台服务器之间的连接数的限制，是ip级别的，默认是60，如果设置为0，那么表明不作任何限制。请注意这个限制的使用范围，仅仅是单台客户端机器与单台ZK服务器之间的连接数限制，不是针对指定客户端IP，也不是ZK集群的连接数限制，也不是单台ZK对所有客户端的连接数限制。指定客户端IP的限制策略，这里有一个patch，可以尝试一下：(http://rdc.taobao.com/team/jm/archives/1334（No Java system property)
+maxClientCnxns|单个客户端与单台服务器之间的连接数的限制，是ip级别的，默认是60，如果设置为0，那么表明不作任何限制。请注意这个限制的使用范围，仅仅是单台客户端机器与单台ZK服务器之间的连接数限制，不是针对指定客户端IP，也不是ZK集群的连接数限制，也不是单台ZK对所有客户端的连接数限制。指定客户端IP的限制策略，这里有一个patch。。（No Java system property)
 clientPortAddress|对于多网卡的机器，可以为每个IP指定不同的监听端口。默认情况是所有IP都监听 clientPort 指定的端口。  New in 3.3.0 
 minSessionTimeoutmaxSessionTimeout|Session超时时间限制，如果客户端设置的超时时间不在这个范围，那么会被强制设置为最大或最小时间。默认的Session超时时间是在2 *  tickTime ~ 20 * tickTime 这个范围 New in 3.3.0 
 fsync.warningthresholdms|事务日志输出时，如果调用fsync方法超过指定的超时时间，那么会在日志中输出警告信息。默认是1000ms。(Java system property:  fsync.warningthresholdms )New in 3.3.4 
@@ -67,10 +67,10 @@ leaderServes|默认情况下，Leader是会接受客户端连接，并提供正�
 server.x=[hostname]:nnnnn[:nnnnn]|这里的x是一个数字，与myid文件中的id是一致的。右边可以配置两个端口，第一个端口用于F和L之间的数据同步和其它通信，第二个端口用于Leader选举过程中投票通信。  (No Java system property) 
 group.x=nnnnn[:nnnnn]weight.x=nnnnn|对机器分组和权重设置，可以  [参见这里](http://zookeeper.apache.org/doc/r3.4.3/zookeeperHierarchicalQuorums.html)(No Java system property) 
 cnxTimeout|Leader选举过程中，打开一次连接的超时时间，默认是5s。(Java system property: zookeeper.  cnxTimeout ) 
-zookeeper.DigestAuthenticationProvider.superDigest|ZK权限设置相关，具体参见  《  使用super  **身份对有权限的节点进行操作 **》  和  《 ZooKeeper   **权限控制 **》 
+zookeeper.DigestAuthenticationProvider.superDigest|ZK权限设置相关，具体参见《使用super  **身份对有权限的节点进行操作 **》和《ZooKeeper **权限控制 **》 
 |skipACL 对所有客户端请求都不作ACL检查。如果之前节点上设置有权限限制，一旦服务器上打开这个开头，那么也将失效。(Java system property:  zookeeper.skipACL ) 
 forceSync|这个参数确定了是否需要在事务日志提交的时候调用 [FileChannel ](http://rdc.taobao.com/team/%5C/java%5C/jdk1.6.0_22%5C/jre%5C/lib%5C/rt.jar%3Cjava.nio.channels(FileChannel.class%E2%98%83FileChannel).force)来保证数据完全同步到磁盘。(Java system property: zookeeper.forceSync ) 
-jute.maxbuffer|每个节点最大数据量，是默认是1M。这个限制必须在server和client端都进行设置才会生效。(Java system property: jute.maxbuffer ) 
+jute.maxbuffer|每个节点最大数据量，是默认是1M。这个限制必须在server和client端都进行设置才会生效。(Java system property: jute.maxbuffer )
 
 
 ### 实验 & 性能测试 & benchmark
