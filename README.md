@@ -63,6 +63,7 @@ Hystrix  断路器 熔断器
 
 
 ## references
+* [监控知识体系](https://app.yinxiang.com/fx/77225f1a-3b6a-40ad-9733-e525aa406557)
 * [如何为企业快速设计高可用的阿里云架构](https://blog.51cto.com/ganbing/2103694)
 * [myCat github docs](https://github.com/MyCATApache/Mycat-doc)
 * [LDAP概念和原理介绍](https://www.cnblogs.com/wilburxu/p/9174353.html)
