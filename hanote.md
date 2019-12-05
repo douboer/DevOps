@@ -131,6 +131,8 @@ DEST:RS IP                   +---------------+               DEST: LVS INTERNAL 
   - session保持 :question:
   - 健康检查？url检测 :question:
 
+
+
 #### LVS
   - 四层
   - 流量类型支持度
