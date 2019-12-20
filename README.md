@@ -1,52 +1,52 @@
 
 # DevOps
 
-### Load balance & HA
+## Load balance & HA
  * [LB&HA笔记](hanote.md)
 
-### mutiple sites disaster recovery
+## mutiple sites disaster recovery
  * [多活/异地容灾](disaster_recovery.md)
 
-### 架构
+## 架构
 * [taobao架构演进note](taobao_arch.md)
 
-### 数据库
+## 数据库
 * [myCat笔记](mycat.md)
 * [数据库中间件](dbmiddleware.md)
 * [数据库](database.md)
 
-### 缓存
+## 缓存
  * [redis]()
  * [memcached](https://github.com/memcached/memcached)
 
-### 微服务
+## 微服务
 Hystrix  断路器 熔断器
 
-### 消息系统
+## 消息系统
  * kafka
  * rocketMQ
 
-### 日志&监控
+## 日志&监控
  * flume
  * openTSDB
 
-### 统一认证
+## 统一认证
  * ldap
  * CAS做SSO
 
-### 持续集成CI/CD
+## 持续集成CI/CD
 
-### 自动化测试
+## 自动化测试
 
-### 混沌工程 & 故障演练
+## 混沌工程 & 故障演练
   * chaosblade
   * chaosmonkey
   * monkeyking
 
-### 所谓中台
+## 所谓中台
 * [中台笔记](zhongtai.md)
 
-### 工具
+## 工具
 * chef
 * puppet
 * docker
@@ -54,10 +54,11 @@ Hystrix  断路器 熔断器
 * k8s
 * ansible
 
-### 信息安全体系
+## 信息安全体系
 * [信息安全](security.md)
 
 
+## devops master certificate
 
 
 
@@ -70,6 +71,7 @@ Hystrix  断路器 熔断器
 * [华为架构师8年经验谈：从单体架构到微服务的服务化演进之路](https://sdk.cn/news/4033)
 
 * [ali Chaosblade](https://github.com/chaosblade-io/chaosblade/blob/master/README_CN.md)
+* [这些工具都没用过？还谈什么DevOps](http://www.devops-master.com/?id=29)
 
 
-### [运维问题](opsquestion.md)
+## [运维问题](opsquestion.md)
