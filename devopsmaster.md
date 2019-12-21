@@ -1,6 +1,5 @@
 # devops master certificate
 
---- 
 1. 验收测试的最佳选择? Happy Path
 2. 创建可执行文件的工具是一种什么样的构建工具? Make, 面向产品
 3. 一出问题就骂外包: 加强协作, 不指责.
