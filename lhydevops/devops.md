@@ -1,50 +1,3 @@
-<!--
-## 目录
-
-<link rel="stylesheet" href="http://yandex.st/highlightjs/6.2/styles/googlecode.min.css">
- 
-<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-<script src="http://yandex.st/highlightjs/6.2/highlight.min.js"></script>
- 
-<script>hljs.initHighlightingOnLoad();</script>
-<script type="text/javascript">
- $(document).ready(function(){
-      $("h1,h2,h3,h4,h5,h6").each(function(i,item){
-        var tag = $(item).get(0).localName;
-        if ($(this).text()!="目录") {
-        
-          
-        $(item).attr("id","wow"+i);
-        $("#category").append('<font class="new'+tag+'" >'+$(this).text()+'</font></br>');
-        $(".newh1").css("margin-left",0);
-        $(".newh1").css("font-size",22);
-        $(".newh2").css("margin-left",20);
-        
-        $(".newh2").css("font-size",20);
-        $(".newh3").css("margin-left",40);
-        $(".newh3").css("font-size",18);
-        $(".newh4").css("margin-left",60);
-        $(".newh4").css("font-size",16);
-        $(".newh5").css("margin-left",80);
-        $(".newh5").css("font-size",14);
-        $(".newh6").css("margin-left",100);
-       
-        
-        }
- 
-      });
- });
-</script>
-<div id="category"></div>
-
-<div style="height:300px"></div>
-
-![](devops_guide.png =800x) 
-<!--
-###Think it,build it,ship it,tweak it.
-###思考、构建、交付、调整
--->
-
 ## 1. DevOps理解
 
 ### 1.1 DevOps概念
@@ -85,7 +38,6 @@ DevOps比持续交付更进一步，更加强调面向用户，DevOps的目标�
 4. 交付参与者的变化：从产品、开发、测试变成产品、开发、测试、技术运营
 
 
-		
 ### 1.2 背景
 <!--为什么要推进DevOps-->
 
@@ -1217,4 +1169,3 @@ OS级别
 3. https://en.wikipedia.org/wiki/Continuous_delivery
 4. https://mp.weixin.qq.com/s?__biz=MzA4NjAzMjEyOA==&mid=205192073&idx=1&sn=6ebb4dcced828e97942e56b1a8fe928b&scene=20&key=ac89cba618d2d976263b992b03e366b5ef76fdc90a228835275dc416d391bbb1393dcab4f5dbbf4490b3fadc3ee056bd&ascene=0&uin=NDIxNzM0MTk1&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.11.1+build(15B42)&version=11020201&pass_ticket=3JkPx8DeGOHx7CM6mjt8MlyRHIX%2FXAsyAD8c9D%2FI2%2BuuY6%2BJvPXtuXob28YOQvHl
 5. 
-
