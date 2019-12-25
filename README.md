@@ -57,8 +57,9 @@ Hystrix  断路器 熔断器
 * [信息安全](security.md)
 
 
-## devops master certificate
-
+## devops master
+### [certificate](devopscertificate.md)
+### [summary](devopssummary.md)
 
 
 ## references
@@ -73,5 +74,6 @@ Hystrix  断路器 熔断器
 * [ali Chaosblade](https://github.com/chaosblade-io/chaosblade/blob/master/README_CN.md)
 * [这些工具都没用过？还谈什么DevOps](http://www.devops-master.com/?id=29)
 
+* [金丝雀发布、滚动发布、蓝绿发布到底有什么差别？关键点是什么？](https://www.cnblogs.com/apanly/p/8784096.html)
 
 ## [运维问题](opsquestion.md)
