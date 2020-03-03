@@ -18,7 +18,7 @@ devops之所以强调blameless，因为blameless的确是基础，不光是让�
 没有blame，不骂人，领导总是担心没有震慑力，底下人不能好好干活，典型专制政府型思维，官僚文化
 
 
-那么，问题是，blameless，领导靠什么助推工作？
+那么，问题是，blameless，devops下领导靠什么管理方法助推工作？
 
 
 ---
