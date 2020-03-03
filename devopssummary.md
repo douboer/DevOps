@@ -32,9 +32,7 @@
 1. 验收测试的最佳路径happy path
 1. 交付过程中，缺陷被发现得越早，修复它的成本就越低 fail fast
 
-
 紧急变更不应该成为不走变更流程的理由
-
 
 #### 精益8大浪费 DOWNTIME
 
@@ -61,9 +59,7 @@ type | x
 可测试的（Testable） | 用户故事已完成的标准，或者说能够确认已完成
 
 
-
 ### references
 - [写给新人的BA工作说明书](https://www.jianshu.com/p/9efbf1233a7e)
 - [DevOps实施：从敏捷文化与配置文件的困惑说起](https://blog.csdn.net/enweitech/article/details/78595263)
-
 
