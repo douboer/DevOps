@@ -51,6 +51,8 @@ extra processing/feature | 镀金 => 5why
 
 #### 需求/用户故事原则 INVEST
 
+type | x
+-- | -- 
 独立的（Independent） | 解耦
 便于沟通（Negotiable） | 减少与客户等相关方的沟通成本
 有价值的（Valuable） | 对客户有价值
