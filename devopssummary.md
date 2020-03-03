@@ -27,8 +27,8 @@
    确保交付团队能得到应用程序在类生产环境上的不断反馈
 1. 创建监控策略：collect, store, dashboard, log, monitor
 1. 企业治理：
-1   - 符合度(conformance)，合规性，关注遵从性，保障，监管，责任，透明管理
-1   - 执行度(performance)，绩效，关注业务和价值
+    - 符合度(conformance)，合规性，关注遵从性，保障，监管，责任，透明管理
+    - 执行度(performance)，绩效，关注业务和价值
 1. 验收测试的最佳路径happy path
 1. 交付过程中，缺陷被发现得越早，修复它的成本就越低 fail fast
 
